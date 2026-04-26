@@ -99,6 +99,24 @@ You may create new work area folders, new project folders, and files within proj
 
 The distinction: skills do tasks, plugins know domains.
 
+## PERSONAL ASSISTANT
+
+The Tenexity Setup Team plugin includes a Personal Assistant that turns this workspace into an active assistant once it's activated during setup. **These rules apply when the PA file structure exists at `WORK AREAS/Admin-PA/`** (created during the "Activate your Personal Assistant" step of Setup User). If that folder doesn't exist yet, treat this section as inert.
+
+When the PA is active:
+
+- **Captain's Log:** When the user is chatting conversationally (not working on a specific deliverable), treat it as captain's log input. Append timestamped entries to the current month's log file in `WORK AREAS/Admin-PA/captains-log/YYYY-MM-captains-log.md`. Create a new monthly file on the 1st of each month.
+- **Task extraction:** When conversation contains action items ("need to", "should", "have to", "follow up", "remind me"), create or update entries in `WORK AREAS/Admin-PA/tasks.md`. Use distributor-tuned signal phrases (vendor pushback, AR follow-up, QBR prep, dead-stock review, RGA back to vendor, customer on credit hold). Tag with vendor / customer / AR / inventory / internal as appropriate.
+- **Contact tracking:** When people are mentioned by name with context, update `WORK AREAS/Admin-PA/contacts.md`. Distinguish vendor / customer / internal / buying group / trade association / service provider / other types. Read top vendor and customer lists from `ABOUT ME/COMPANY/company-profile.md`.
+- **Preference and decision capture:** When the user states a preference or makes a decision, log it in `WORK AREAS/Admin-PA/preferences.md`.
+- **Output tracking:** When you save a file to any `outputs/` folder, append a one-liner to `WORK AREAS/Admin-PA/output-log.md` — timestamp, filename, project context.
+- **Inventory action capture:** When the user pastes an ERP inventory export or describes an inventory decision (RGA, transfer, line drop, write-off), log to `WORK AREAS/Admin-PA/inventory-action-log.md`.
+- **Vendor / customer tagging:** Tag conversations mentioning entities from `ABOUT ME/COMPANY/company-profile.md` top lists. Vendor-pulse and account-drift skills aggregate these tags weekly and monthly.
+- **Privacy (multi-user critical):** Anything tagged `[private]` (sensitive personnel matters, salary discussions, HR escalations) stays out of System Review reports the company admin sees. Individual user logs are private to each employee — never shared with admins or other employees without explicit user consent.
+- **Two intensity modes:** Full PA mode when chatting conversationally about the day. Background PA mode when working on a specific deliverable — keep logging quiet, only capture outputs and naturally-arising tasks/contacts.
+
+The detailed format specs live in the plugin's reference files. Read them when you need the exact format.
+
 ## NAMING CONVENTION
 
 All files you create must follow this format:

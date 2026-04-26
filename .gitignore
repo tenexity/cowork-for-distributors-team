@@ -1,8 +1,5 @@
-# OS / editor junk
 .DS_Store
 *.icloud
 .vscode/
 .idea/
-
-# Internal Tenexity files — should never appear in distribution repos
 _TENEXITY-INTERNAL_*
